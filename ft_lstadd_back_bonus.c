@@ -1,0 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ybouryal <ybouryal@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/24 17:17:54 by ybouryal          #+#    #+#             */
+/*   Updated: 2024/10/24 17:19:44 by ybouryal         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft_bonus.h"
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list	*last;
+
+	last = ft_lstlast(*lst);
+	last->next = new;
+}
