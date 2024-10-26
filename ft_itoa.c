@@ -34,11 +34,9 @@ static int	numlen(int n)
 
 static char	*_itoa(int n, char *buffer, size_t len)
 {
-	size_t	i;
 	size_t	is_neg;
 	size_t	buf_idx;
 
-	i = 0;
 	is_neg = 0;
 	buf_idx = len - 1;
 	if (n < 0)

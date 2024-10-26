@@ -6,11 +6,11 @@
 /*   By: ybouryal <ybouryal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:01:13 by ybouryal          #+#    #+#             */
-/*   Updated: 2024/10/24 17:02:56 by ybouryal         ###   ########.fr       */
+/*   Updated: 2024/10/26 10:45:59 by ybouryal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

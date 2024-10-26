@@ -21,14 +21,10 @@ char	*ft_strdup(const char *str)
 	if (!str || !str[0])
 		return (NULL);
 	len = ft_strlen(str);
-	duplicate = (char *)malloc(sizeof(char) * len);
+	duplicate = (char *)malloc(sizeof(char) * (len + 1));
 	if (!duplicate)
 		return (NULL);
 	i = 0;
-	while (i < len)
-	{
-		duplicate[i] = str[i];
-		i++;
-	}
+	ft_strlcpy(duplicate, str, len + 1);
 	return (duplicate);
 }

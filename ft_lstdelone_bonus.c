@@ -10,10 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	del(lst->content);
-	free(lst);
+	if (lst)
+	{
+		if (del && lst->content)
+			del(lst->content);
+		free(lst);
+	}
 }
