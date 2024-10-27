@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybouryal <ybouryal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 17:18:15 by ybouryal          #+#    #+#             */
-/*   Updated: 2024/10/22 17:55:02 by ybouryal         ###   ########.fr       */
+/*   Created: 2024/10/27 22:40:02 by ybouryal          #+#    #+#             */
+/*   Updated: 2024/10/27 22:40:57 by ybouryal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+int main()
 {
-	size_t	i;
-	size_t	j;
-
-	if (!needle)
-		return ((char *)haystack);
-	i = 0;
-	while (i < len && haystack[i])
-	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && (i + j) < len)
-		{
-			if (needle[j + 1] == 0)
-				return ((char *)haystack + i);
-			j++;
-		}
-		i++;
-	}
-	return (NULL);
+	printf("strlen = %zu\n", ft_strlen("hello world"));
 }
