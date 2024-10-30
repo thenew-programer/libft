@@ -24,7 +24,7 @@ This project is about coding a C library called Libft.
 */
 typedef struct s_list
 {
-	void			*content;
+	void		*content;
 	struct s_list	*next;
 }	t_list;
 ```
@@ -38,3 +38,6 @@ typedef struct s_list
     # To bonus part to library use:
     make bonus
     ```
+
+## More Details
+- For more details see the project's [subject](en.subject.pdf).
