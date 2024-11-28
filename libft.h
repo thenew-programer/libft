@@ -18,6 +18,11 @@
 # include <limits.h>
 # include <unistd.h>
 
+/* Get_Next_Line Buffer size*/
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 2048
+# endif
+
 /* Part 1: Libc functions */
 
 /**
@@ -341,4 +346,15 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 void	ft_lstclear(t_list **lst, void (*del)(void *));
+
+/**
+ * Desc:	function that returns a line read from a
+ *			file descriptor
+ *
+ * @fd:		File descriptor to read from.
+ *
+ * return:	line from file, Or null if
+ * 			an error occur.
+*/
+char	*get_next_line(int fd);
 #endif
