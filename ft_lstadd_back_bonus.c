@@ -17,11 +17,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new_node)
 	t_list	*last;
 
 	if (*lst == NULL)
-		*lst = new;
+		*lst = new_node;
 	else
 	{
 		last = ft_lstlast(*lst);
 		if (last)
-			last->next = new;
+			last->next = new_node;
 	}
 }
