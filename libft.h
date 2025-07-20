@@ -6,7 +6,7 @@
 /*   By: ybouryal <ybouryal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 18:38:35 by ybouryal          #+#    #+#             */
-/*   Updated: 2024/10/26 11:24:18 by ybouryal         ###   ########.fr       */
+/*   Updated: 2025/05/03 09:01:03 by ybouryal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,29 @@
 #  define BUFFER_SIZE 2048
 # endif
 
+/**
+ * @content:	The data contained in the node.
+ * @next:		The address to the next node, or
+ *				NULL if the next node is the last one.
+*/
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 /* Part 1: Libc functions */
+
+/**
+ * Desc:	Checks if the char 'c' is an space character.
+ * 			space is defined by isspace.
+ *
+ * @c:		The char to check.
+ *
+ * return:	Non-zero value if 'c' is alnum
+ * 			Zero otherwise.
+ */
+int		ft_isspace(int c);
 
 /**
  * Desc:	Checks if the char 'c' is an alphabet or digit.
@@ -113,6 +135,7 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strdup(const char *str);
+char	*ft_strndup(const char *s, size_t size);
 void	*ft_memset(void *dest, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
@@ -254,17 +277,6 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
 /* Bonus */
-
-/**
- * @content:	The data contained in the node.
- * @next:		The address to the next node, or
- *				NULL if the next node is the last one.
-*/
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 
 /**
  * Desc:		Allocates and returns a new node.
